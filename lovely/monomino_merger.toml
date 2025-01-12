@@ -1,0 +1,27 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = -10
+
+#intercepting the code would be fun
+
+#[[patches]]
+#[patches.pattern]
+#target = "functions/UI_definitions.lua"
+#pattern = "local base_attach = base_background:get_UIE_by_ID('ATTACH_TO_ME')"
+#position = "after"
+#payload = '''if card.ability.name == "Monomino" then
+#	base_attach.children.use = G.UIDEF.card_focus_button{
+#		card = card, parent = base_attach, type = 'use',
+#		func = 'can_use_consumeable', button = 'use_card', card_width = card_width
+#	}
+#end'''
+#match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "functions/UI_definitions.lua"
+pattern = "a"
+position = "at"
+payload = '''a'''
+match_indent = true
