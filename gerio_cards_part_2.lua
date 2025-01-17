@@ -489,7 +489,7 @@ SMODS.Joker {
 
 SMODS.Consumable {
 	key = 'tetra_blocker',
-	set = 'Spectral',
+	set = 'insanium',
 	loc_txt = {
 		name = 'Blocker',
 		text = {
@@ -535,7 +535,7 @@ SMODS.Consumable {
 
 SMODS.Consumable {
 	key = 'woot_bamtris',
-	set = 'Spectral',
+	set = 'insanium',
 	loc_txt = {
 		name = 'Quad Formation',
 		text = {
@@ -550,6 +550,11 @@ SMODS.Consumable {
 	cost = 78,
 	unlocked = true,
 	discovered = true,
+}
+
+SMODS.ObjectType {
+	key = "bamtris_variants",
+	default = "j_gerioc2_bamtris",
 }
 --[[
 SMODS.Booster{ -- adaptive pack that adjusts how much this pack contains
