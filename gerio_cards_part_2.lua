@@ -83,6 +83,14 @@ SMODS.Joker {
 		end
 		card.ability.extra.remain = math.floor(card.ability.extra.remain+0.5) --for the case where the number isn't integer
 	end,
+	load = function(self, card, card_table, other_card)
+		G.E_MANAGER:add_event(Event({
+			func = function()
+				card.ability.extra.kado = card -- no-cloning theorem fix
+				return true
+			end,
+		}))
+	end,
 	calculate = function(self, card, context)
 		if context.joker_main and not context.blueprint then
 			if card.ability.extra.kado ~= card then
